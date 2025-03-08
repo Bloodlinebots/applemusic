@@ -69,6 +69,8 @@ STICKERS = [
 ]
 
 
+async def send_sticker(message):
+    await message.reply_sticker(random.choice(STICKERS))
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
@@ -133,10 +135,7 @@ async def start_pm(client, message: Message, _):
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
 
-        # Send a random sticke
-
-async def start_command_handler(message):
-    await send_sticker(message)
+       
 # Wait 1 second and delete the sticker
 await asyncio.sleep(1)  
 await sticker_msg.delete()
