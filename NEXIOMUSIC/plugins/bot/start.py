@@ -67,9 +67,7 @@ STICKERS = [
     "CAACAgUAAxkBAAEBdntm-CKSYkLSIPrQAiOxMeBfyZpGegACfRAAAlMQwVdx2UGzjxf3CR4E",
 ]
 
-async def delete_sticker_after_delay(message, delay):
-    await asyncio.sleep(delay)
-    await message.delete()
+
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
@@ -133,16 +131,46 @@ async def start_pm(client, message: Message, _):
         served_chats = len(await get_served_chats())
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
-        await message.reply_video(
-            random.choice(NEXIO_VD),
-            caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM, served_users, served_chats),
-            reply_markup=InlineKeyboardMarkup(out),
-        )
-        if await is_on_off(2):
-            await app.send_message(
-                chat_id=config.LOGGER_ID,
-                text=f"❖ {message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>๏ ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>๏ ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
-            )
+
+        # Send a random sticker
+sticker_msg = await message.reply_sticker(random.choice(STICKERS))
+
+# Wait 1 second and delete the sticker
+await asyncio.sleep(1)  
+await sticker_msg.delete()
+
+# Now send the progress message
+baby = await message.reply_text("[□□□□□□□□□□] 0%")
+
+# Simulate progress bar updates
+progress = [
+    "[■□□□□□□□□□] 10%", "[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%",
+    "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%",
+    "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"
+]
+for step in progress:
+    await baby.edit_text(f"**{step}**")
+    await asyncio.sleep(0.3)  # Adjust delay for smooth updates
+
+# After progress bar reaches 100%, send a final message
+await baby.edit_text("**❖ Jᴀʏ sʜʀᴇᴇ ʀᴀᴍ 🚩...**")
+await asyncio.sleep(1)
+
+# Delete the progress message
+await baby.delete()
+
+# Send the actual video
+await message.reply_video(
+    random.choice(NEXIO_VD),
+    caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM, served_users, served_chats),
+    reply_markup=InlineKeyboardMarkup(out),
+)
+
+if await is_on_off(2):
+    await app.send_message(
+        chat_id=config.LOGGER_ID,
+        text=f"❖ {message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>๏ ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>๏ ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
+    )
 
 @app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
