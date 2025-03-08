@@ -135,7 +135,10 @@ async def start_pm(client, message: Message, _):
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
 
-       
+   # Pehle sticker bhejo
+
+    sticker_msg = await message.reply_sticker(random.choice(STICKERS))  
+   
 # Wait 1 second and delete the sticker
 await asyncio.sleep(1)  
 await sticker_msg.delete()
