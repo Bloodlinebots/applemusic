@@ -19,14 +19,12 @@ def private_panel(_):
             InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/{app.username}?startgroup=true",)
         ],
         [
+            InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
             InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper"),
         ],
         [
             InlineKeyboardButton(text=_["S_B_14"], callback_data="ABOUT_CP"),
             InlineKeyboardButton(text=_["S_B_2"], callback_data="SUPPORT_CP"),
-        ],
-        [
-            InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
         ],
         ]
     
