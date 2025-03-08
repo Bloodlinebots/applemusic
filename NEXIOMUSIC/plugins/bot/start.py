@@ -40,7 +40,7 @@ NEXIO_VD = ["https://telegra.ph/file/89c5023101b65f21fb401.mp4",
           "https://telegra.ph/file/f1b1754fc9d01998f24df.mp4",
           "https://telegra.ph/file/421ee22ed492a7b8ce101.mp4"]
 
-HIMANSHI_PH = [
+HIMANSHI = [
     "https://files.catbox.moe/jrupn9.jpg",
     "https://files.catbox.moe/5z141p.jpg",
     "https://files.catbox.moe/fnl0h7.jpg",
@@ -52,7 +52,8 @@ HIMANSHI_PH = [
     "https://files.catbox.moe/ss6r60.jpg",
     "https://files.catbox.moe/yuob18.jpg",
     "https://files.catbox.moe/i9xrrp.jpg",
-    "https://files.catbox.moe/a9tx8f.jpg"
+
+"https://files.catbox.moe/a9tx8f.jpg",
     "https://files.catbox.moe/wlt26x.jpg",
     "https://files.catbox.moe/c1lylh.jpg",
     "https://files.catbox.moe/82eymp.jpg",
