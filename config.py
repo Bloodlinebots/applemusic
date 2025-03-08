@@ -14,7 +14,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # ❖ SPECIFY WHERE TO GET THE FOLLOWING CREDENTIALS 
 OWNER_USERNAME = getenv("OWNER_USERNAME", "Rishu1286")
 BOT_USERNAME = getenv("BOT_USERNAME", "RADHE_MUSIC_ROBOT")
-BOT_NAME = getenv("BOT_NAME", "•─╼⃝𖠁 ʀɪsʜυ 𖠁⃝╾─•")
+BOT_NAME = getenv("BOT_NAME", " ʀɪsʜυ")
 ASSUSERNAME = getenv("ASSUSERNAME", "NEXIO_MUSIC_ASSISTANT")
 EVALOP = list(map(int, getenv("EVALOP", "").split()))
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -29,7 +29,7 @@ OWNER_ID = int(getenv("OWNER_ID", ""))
 # ❖ HEROKU DEPLOYMENT SETTINGS - REFER TO HEROKU DOCUMENTATION ON HOW TO OBTAIN THESE 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/SEX-SUX/ANON")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/PowerDaxx/Pagal")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
