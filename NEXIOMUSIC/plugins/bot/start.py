@@ -142,7 +142,7 @@ async def start_pm(client, message: Message, _):
 # Wait 1 second and delete the sticker
 async def some_function():
     await asyncio.sleep(1)  
-await sticker_msg.delete()
+
 
 # Now send the progress message
 baby = await message.reply_text("[□□□□□□□□□□] 0%")
