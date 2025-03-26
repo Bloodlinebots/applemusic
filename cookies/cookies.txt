@@ -2,8 +2,8 @@
 # https://curl.haxx.se/rfc/cookie_spec.html
 # This is a generated file! Do not edit.
 
-www.wikipedia.org	FALSE	/	TRUE	1737043276	WMF-Last-Access	15-Dec-2024
-.wikipedia.org	TRUE	/	TRUE	1737043276	WMF-Last-Access-Global	15-Dec-2024
+www.wikipedia.org	FALSE	/	TRUE	1737043276	WMF-Last-Access	15-Dec-2025
+.wikipedia.org	TRUE	/	TRUE	1737043276	WMF-Last-Access-Global	15-Dec-2025
 www.wikipedia.org	FALSE	/	TRUE	1734232186	NetworkProbeLimit	0.001
 .mozilla.org	TRUE	/	FALSE	1768788796	_ga_B9CY1C9VBC	GS1.1.1734228786.1.1.1734228796.0.0.0
 .mozilla.org	TRUE	/	FALSE	1768788786	_ga	GA1.2.969349087.1734228786
