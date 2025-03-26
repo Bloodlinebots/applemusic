@@ -10,7 +10,7 @@ autoenddb = mongodb.autoend
 assdb = mongodb.assistants
 blacklist_chatdb = mongodb.blacklistChat
 blockeddb = mongodb.blockedusers
-chatsdb = mongodb.chats
+chatsdb = mongodb.chatsdb
 channeldb = mongodb.cplaymode
 countdb = mongodb.upcount
 gbansdb = mongodb.gban
@@ -20,7 +20,7 @@ playmodedb = mongodb.playmode
 playtypedb = mongodb.playtypedb
 skipdb = mongodb.skipmode
 sudoersdb = mongodb.sudoers
-usersdb = mongodb.tgusersdb
+usersdb = mongodb.usersdb
 
 # Shifting to memory [mongo sucks often]
 active = []
