@@ -32,23 +32,32 @@ NEXIOPIC = [
 @app.on_message(filters.new_chat_members, group=2)
 async def join_watcher(_, message):    
     chat = message.chat
-    link = await app.export_chat_invite_link(chat.id)
+    try:
+        link = await app.export_chat_invite_link(chat.id)
+    except Exception:
+        link = None
+
     for member in message.new_chat_members:
         if member.id == app.id:
             count = await app.get_chat_members_count(chat.id)
+            me = await app.get_me()
+            bot_name = me.first_name
+
             msg = (
                 f"<b>❖ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ #ɴᴇᴡ_ɢʀᴏᴜᴘ ❖</b>\n\n"
-               
-                f"<b>❍ ɢʀᴏᴜᴘ ɴᴀᴍᴇ ➠</b> {message.chat.title}\n"
-                f"<b>❍ ɢʀᴏᴜᴘ ɪᴅ ➠</b> {message.chat.id}\n"
-                f"<b>❍ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ➠</b> @{message.chat.username}\n"
-                f"<b>❍ ɢʀᴏᴜᴘ ʟɪɴᴋ ➠</b> {link}\n"
+                f"<b>❍ ɢʀᴏᴜᴘ ɴᴀᴍᴇ ➠</b> {chat.title}\n"
+                f"<b>❍ ɢʀᴏᴜᴘ ɪᴅ ➠</b> {chat.id}\n"
+                f"<b>❍ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ➠</b> @{chat.username if chat.username else 'None'}\n"
+                f"<b>❍ ɢʀᴏᴜᴘ ʟɪɴᴋ ➠</b> {link or 'No Link (Bot not admin)'}\n"
                 f"<b>❍ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs ➠</b> {count}\n\n"
                 f"<b>❖ ᴀᴅᴅᴇᴅ ʙʏ ➠</b> {message.from_user.mention}"
             )
-            await app.send_photo(LOG_GROUP_ID, photo=random.choice(NEXIOPIC), caption=msg, reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(f"sᴇᴇ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɢʀᴏᴜᴘ", url=f"{link}")]
-            ]))
+            keyboard = None
+            if link:
+                keyboard = InlineKeyboardMarkup([
+                    [InlineKeyboardButton(f"sᴇᴇ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɢʀᴏᴜᴘ", url=link)]
+                ])
+            await app.send_photo(LOG_GROUP_ID, photo=random.choice(NEXIOPIC), caption=msg, reply_markup=keyboard)
 
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(_, message: Message):
@@ -57,6 +66,7 @@ async def on_left_chat_member(_, message: Message):
         title = message.chat.title
         username = f"@{message.chat.username}" if message.chat.username else "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
         chat_id = message.chat.id
-        left = f"<b>❖ #ʟᴇғᴛ_ɢʀᴏᴜᴘ ᴀ ɢʀᴏᴜᴘ ❖</b>\n\n<b>❍ ɢʀᴏᴜᴘ ɴᴀᴍᴇ ➠</b> {title}\n\n<b>❍ ɢʀᴏᴜᴘ ɪᴅ ➠</b> {chat_id}\n\n<b>❍ ʙᴏᴛ ʀᴇᴍᴏᴠᴇᴅ ʙʏ ➠</b> {remove_by}\n\n<b>❖ ʙᴏᴛ ɴᴀᴍᴇ ➠</b> {app.name}"
+        me = await app.get_me()
+        bot_name = me.first_name
+        left = f"<b>❖ #ʟᴇғᴛ_ɢʀᴏᴜᴘ ᴀ ɢʀᴏᴜᴘ ❖</b>\n\n<b>❍ ɢʀᴏᴜᴘ ɴᴀᴍᴇ ➠</b> {title}\n\n<b>❍ ɢʀᴏᴜᴘ ɪᴅ ➠</b> {chat_id}\n\n<b>❍ ʙᴏᴛ ʀᴇᴍᴏᴠᴇᴅ ʙʏ ➠</b> {remove_by}\n\n<b>❖ ʙᴏᴛ ɴᴀᴍᴇ ➠</b> {bot_name}"
         await app.send_photo(LOG_GROUP_ID, photo=random.choice(NEXIOPIC), caption=left)
-        
