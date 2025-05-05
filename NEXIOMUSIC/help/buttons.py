@@ -7,7 +7,7 @@ from NEXIOMUSIC import app
 class BUTTONS(object):
     MBUTTON = [
         [
-            InlineKeyboardButton("˹⎯፝֟፝֟⎯꯭᪵ ⃪ѕα͟ηα͟т͟α͟ηⷽιⷨ͟ 𝆺꯭𝅥⎯꯭🚩", url="https://t.me/FEELING_LIKE_KING")
+            InlineKeyboardButton("˹⎯፝֟፝֟⎯꯭᪵ ⃪ѕα͟ηα͟т͟α͟ηⷽιⷨ͟ 𝆺꯭𝅥⎯꯭🚩", url="https://t.me/ll_RADHE7_ll")
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
@@ -18,10 +18,10 @@ class BUTTONS(object):
     SBUTTON = [
  
         [
-            InlineKeyboardButton("ʙᴏᴛ-ᴄʜᴀᴍʙᴇʀ", url="https://t.me/ll_BOTCHAMBER_ll"),
+            InlineKeyboardButton("ʙᴏᴛᴍɪɴᴇ-ᴛᴇᴄʜ", url="https://t.me/BOTMINE_TECH"),
         ],
         [
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/BOT_SUPPORT_GROUP7"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/BOTMINE_SUPPORT"),
             InlineKeyboardButton(" ᴜᴘᴅᴀᴛᴇ", url="https://t.me/UR_RISHU_143"),
         ],
         [
