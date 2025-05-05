@@ -14,11 +14,11 @@ class Helper(object):
 '''
 
     HELP_ABOUT = '''
-**❖ ๏ ʟᴇᴛ's ɪɴᴛʀᴏᴅᴜᴄᴇ [ʀᴀᴅʜᴇ-ᴍᴜsɪᴄ](https://t.me/ll_BOTCHAMBER_ll) ʙᴏᴛ
+**❖ ๏ ʟᴇᴛ's ɪɴᴛʀᴏᴅᴜᴄᴇ [ʀᴀᴅʜᴇ-ᴍᴜsɪᴄ](https://t.me/BOTMINE_TECH) ʙᴏᴛ
 
-➻ [ʀᴀᴅʜᴇ-ᴍᴜsɪᴄ](https://t.me/ll_BOTCHAMBER_ll)  ɪs ᴏɴᴇ ᴏғ ᴛʜᴇ ʙᴇsᴛ ᴍᴜsɪᴄ | ᴠɪᴅᴇᴏ sᴛꝛᴇᴀᴍɪɴɢ ʙᴏᴛ ᴏɴ ᴛᴇʟᴇɢꝛᴧᴍ ғᴏꝛ ʏᴏᴜꝛ ɢꝛᴏᴜᴘs ᴀɴᴅ ᴄʜᴧɴɴᴇʟ
+➻ [ʀᴀᴅʜᴇ-ᴍᴜsɪᴄ](https://t.me/BOTMINE_TECH)  ɪs ᴏɴᴇ ᴏғ ᴛʜᴇ ʙᴇsᴛ ᴍᴜsɪᴄ | ᴠɪᴅᴇᴏ sᴛꝛᴇᴀᴍɪɴɢ ʙᴏᴛ ᴏɴ ᴛᴇʟᴇɢꝛᴧᴍ ғᴏꝛ ʏᴏᴜꝛ ɢꝛᴏᴜᴘs ᴀɴᴅ ᴄʜᴧɴɴᴇʟ
 
-๏ ᴡʜʏ [˹ ʀᴀᴅʜᴇ ᴍᴜsɪᴄ ˼](https://t.me/ll_BOTCHAMBER_ll) ɪs ʙᴇsᴛ ?
+๏ ᴡʜʏ [˹ ʀᴀᴅʜᴇ ᴍᴜsɪᴄ ˼](https://t.me/BOTMINE_TECH) ɪs ʙᴇsᴛ ?
 
 ➻ ʙᴇsᴛ sᴏᴜɴᴅ ǫᴜᴀʟɪᴛʏ
 ➻ ᴍᴜsɪᴄ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇs
@@ -32,7 +32,7 @@ class Helper(object):
 
 ᴀʟʟ ᴛʜᴇ ғᴇᴀᴛᴜʀᴇs ᴀʀᴇ ᴡᴏʀᴋɪɴɢ ғɪɴᴇ
 
-❖ [ᴜᴘᴅᴀᴛᴇ](https://t.me/ll_BOTCHAMBER_ll) |×| [sᴜᴘᴘᴏʀᴛ](https://t.me/BOT_SUPPORT_GROUP7)**
+❖ [ᴜᴘᴅᴀᴛᴇ](https://t.me/BOTMINE_TECH) |×| [sᴜᴘᴘᴏʀᴛ](https://t.me/BOTMINE_SUPPORT)**
 '''
 
 
@@ -54,7 +54,7 @@ class Helper(object):
 ᴡᴇ ᴘʀᴏᴠɪᴅᴇ 24×7 ᴍᴜsɪᴄ sᴇʀᴠɪᴄᴇ sᴏ ᴡᴇ ᴀʟsᴏ ɴᴇᴇᴅ sᴏᴍᴇ ʜᴇʟᴘ ғᴏʀ ɪᴛ, ᴅᴏɴᴀᴛᴇ ɴᴏᴡ ᴠɪᴀ :-
 • ᴜᴘɪ ɪᴅ » **`rishabhxdev@fam`
 **• ǫʀ ᴄᴏᴅᴇ » [ᴛᴀᴘ ᴛᴏ sᴇᴇ ǫʀ ᴄᴏᴅᴇ](https://t.me/rishuqr) **
-**• ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ [ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://t.me/FEELING_LIKE_KING) 🚩
+**• ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ [ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://t.me/ll_RADHE7_ll) 🚩
 
 ʏᴏᴜʀ sᴍᴀʟʟ ᴀᴍᴏᴜɴᴛ ᴄᴀɴ ʜᴇʟᴘ ᴜs ᴀɴᴅ sᴀɴᴀᴛᴀɴɪ ᴛᴏ ɢʀᴏᴡ ᴍᴏʀᴇ**
 '''
