@@ -8,7 +8,7 @@ from git import Repo, GitCommandError, InvalidGitRepositoryError
 import config
 from ..logging import LOGGER
 
-logger = LOGGER(name)
+logger = LOGGER(__name__)  # fixed: replaced 'name' with '__name__'
 
 def install_req(cmd: str) -> Tuple[str, str, int, int]:
     async def install_requirements():
@@ -56,4 +56,4 @@ def git():
         logger.info(f"[GIT] Successfully fetched and pulled latest changes.")
         install_req("pip3 install --no-cache-dir -r requirements.txt")
     except (GitCommandError, InvalidGitRepositoryError) as e:
-        logger.error(f"[GIT] Git Error: {e}")`
+        logger.error(f"[GIT] Git Error: {e}")  # fixed: removed extra backtick
