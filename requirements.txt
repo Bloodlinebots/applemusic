@@ -45,4 +45,9 @@ wget
 yt-dlp
 youtube-search
 youtube-search-python
-pip install pyrogram tgcrypto pytgcalls motor
+pyrogram
+tgcrypto
+pytgcalls
+motor
+pymongo
+
