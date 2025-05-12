@@ -10,6 +10,7 @@ load_dotenv()
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
+AUTO_LEAVE_TIME = int(getenv("AUTO_LEAVE_TIME", "10"))  # मिनट में (default 10 min)
 
 # ❖ SPECIFY WHERE TO GET THE FOLLOWING CREDENTIALS 
 OWNER_USERNAME = getenv("OWNER_USERNAME", "RADHE_XD7")
