@@ -45,9 +45,3 @@ wget
 yt-dlp
 youtube-search
 youtube-search-python
-pyrogram==2.0.106
-tgcrypto
-pytgcalls==0.0.9
-motor
-pymongo
-
