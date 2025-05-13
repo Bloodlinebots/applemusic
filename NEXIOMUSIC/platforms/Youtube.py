@@ -53,8 +53,8 @@ async def shell_cmd(cmd):
 
 
 async def get_stream_url(query, video=False):
-    api_url = "https://api.thequickearn.xyz"
-    api_key = "30DxNexGenBots27202b"
+    api_url = "http://195.231.39.194:1470/youtube"
+    api_key = "SANATANIxTECH"
     
     async with httpx.AsyncClient(timeout=60) as client:
         params = {"query": query, "video": video, "api_key": api_key}
