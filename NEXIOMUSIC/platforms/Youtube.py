@@ -8,8 +8,8 @@ import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
-from NEIXOMUSIC.utils.database import is_on_off
-from NEIXOMUSIC.utils.formatters import time_to_seconds
+from NEXIOMUSIC.utils.database import is_on_off
+from NEXIOMUSIC.utils.formatters import time_to_seconds
 import os
 import glob
 import random
