@@ -10,9 +10,9 @@ from pyrogram.enums import MessageEntityType
 from concurrent.futures import ThreadPoolExecutor
 from youtubesearchpython.__future__ import VideosSearch, CustomSearch
 
-from AnonMusic import LOGGER
-from AnonMusic.utils.database import is_on_off
-from AnonMusic.utils.formatters import time_to_seconds
+from NEXIOMUSIC import LOGGER
+from NEXIOMUSIC.utils.database import is_on_off
+from NEXIOMUSIC.utils.formatters import time_to_seconds
 
 def time_to_seconds(time):
     stringt = str(time)
