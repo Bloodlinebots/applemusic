@@ -1,4 +1,3 @@
-
 import asyncio, httpx, yt_dlp, os
 import glob, re, random, json, requests
 
@@ -13,6 +12,24 @@ from youtubesearchpython.__future__ import VideosSearch, CustomSearch
 from NEXIOMUSIC import LOGGER
 from NEXIOMUSIC.utils.database import is_on_off
 from NEXIOMUSIC.utils.formatters import time_to_seconds
+
+#=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×[ NO NEED COOKIES ]=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×
+
+def cookie_txt_file():
+    try:
+        folder_path = f"{os.getcwd()}/cookies"
+        filename = f"{os.getcwd()}/cookies/logs.csv"
+        txt_files = glob.glob(os.path.join(folder_path, '*.txt'))
+        if not txt_files:
+            raise FileNotFoundError("No .txt files found in the specified folder.")
+        cookie_txt_file = random.choice(txt_files)
+        with open(filename, 'a') as file:
+            file.write(f'Choosen File : {cookie_txt_file}\n')
+        return f"""cookies/{str(cookie_txt_file).split("/")[-1]}"""
+    except:
+        pass
+        
+#=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -34,18 +51,33 @@ async def shell_cmd(cmd):
     return out.decode("utf-8")
 
 
-
 async def get_stream_url(query, video=False):
-    api_url = "http://5.249.150.55:1470/youtube"
-    api_key = "SANATANIxTECH"
-    
+    apis = [
+        {
+            "url": "http://5.249.150.55:1470/youtube",
+            "key": "SANATANIxTECH"
+        },
+        {
+            "url": "http://46.250.243.87:1470/youtube",
+            "key": "1a873582a7c83342f961cc0a177b2b26"
+        }
+    ]
+
     async with httpx.AsyncClient(timeout=60) as client:
-        params = {"query": query, "video": video, "api_key": api_key}
-        response = await client.get(api_url, params=params)
-        if response.status_code != 200:
-            return ""
-        info = response.json()
-        return info.get("stream_url")
+        for api in apis:
+            try:
+                params = {"query": query, "video": video, "api_key": api["key"]}
+                response = await client.get(api["url"], params=params)
+
+                if response.status_code == 200:
+                    info = response.json()
+                    stream_url = info.get("stream_url")
+                    if stream_url:
+                        return stream_url
+            except Exception:
+                continue  # अगली API पर ट्राय करो
+
+    return ""  # अगर कोई भी API काम ना करे
 
 
 
