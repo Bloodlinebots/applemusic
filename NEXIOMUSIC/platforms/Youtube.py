@@ -37,12 +37,9 @@ async def get_stream_url(query, video=False):
     apis = [
         {
             "url": "http://5.249.150.146:1470/youtube",
-            "key": "bd9206c4e3f64f009d35e194ac7b17d8"
-        },
-        {
-            "url": "http://5.249.150.55:1470/youtube",
-            "key": "ca0adbc6c6da592829cf643dcd19bc5b"
+            "key": "d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4"
         }
+        
     ]
 
     async with httpx.AsyncClient(timeout=60) as client:
