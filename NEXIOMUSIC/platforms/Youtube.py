@@ -13,24 +13,6 @@ from NEXIOMUSIC import LOGGER
 from NEXIOMUSIC.utils.database import is_on_off
 from NEXIOMUSIC.utils.formatters import time_to_seconds
 
-#=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×[ NO NEED COOKIES ]=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×
-
-def cookie_txt_file():
-    try:
-        folder_path = f"{os.getcwd()}/cookies"
-        filename = f"{os.getcwd()}/cookies/logs.csv"
-        txt_files = glob.glob(os.path.join(folder_path, '*.txt'))
-        if not txt_files:
-            raise FileNotFoundError("No .txt files found in the specified folder.")
-        cookie_txt_file = random.choice(txt_files)
-        with open(filename, 'a') as file:
-            file.write(f'Choosen File : {cookie_txt_file}\n')
-        return f"""cookies/{str(cookie_txt_file).split("/")[-1]}"""
-    except:
-        pass
-        
-#=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×
-
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
@@ -54,10 +36,13 @@ async def shell_cmd(cmd):
 async def get_stream_url(query, video=False):
     apis = [
         {
+            "url": "http://5.249.150.146:1470/youtube",
+            "key": "bd9206c4e3f64f009d35e194ac7b17d8"
+        },
+        {
             "url": "http://5.249.150.55:1470/youtube",
             "key": "ca0adbc6c6da592829cf643dcd19bc5b"
-        },
-        
+        }
     ]
 
     async with httpx.AsyncClient(timeout=60) as client:
@@ -72,10 +57,9 @@ async def get_stream_url(query, video=False):
                     if stream_url:
                         return stream_url
             except Exception:
-                continue  # अगली API पर ट्राय करो
+                continue
 
-    return ""  # अगर कोई भी API काम ना करे
-
+    return ""
 
 
 class YouTubeAPI:
