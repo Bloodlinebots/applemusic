@@ -6,7 +6,7 @@ from typing import Union
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls  # ✅ sahi hai
-from pytgcalls.types import StreamType  # ✅ alag se import karo
+from pytgcalls.types.stream_type import StreamType # ✅ alag se import karo
 from pytgcalls.exceptions import (
     AlreadyJoinedError,
     NoActiveGroupCall,
