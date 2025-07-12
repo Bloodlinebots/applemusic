@@ -5,14 +5,13 @@ from typing import Union
 
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
-from pytgcalls import PyTgCalls  # ✅ sahi hai
-from pytgcalls.types.stream_type import StreamType # ✅ alag se import karo
+from pytgcalls import PyTgCalls  # ✅ correct
+from pytgcalls.types import Update
 from pytgcalls.exceptions import (
     AlreadyJoinedError,
     NoActiveGroupCall,
     TelegramServerError,
 )
-from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
 from pytgcalls.types.stream import StreamAudioEnded
@@ -38,7 +37,6 @@ from NEXIOMUSIC.utils.inline.play import stream_markup
 from NEXIOMUSIC.utils.stream.autoclear import auto_clean
 from NEXIOMUSIC.utils.thumbnails import get_thumb
 from strings import get_string
-
 autoend = {}
 counter = {}
 
